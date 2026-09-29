@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1917 Produções</title>
+<meta name="description" content="1917 Produções — audiovisual, música e cultura. Transforma a realidade em obra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{margin:0;background:#050505}body{margin:0;background:#050505;color:#f5f4ef;font-family:"Space Grotesk",sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}body.is-transitioning{overflow:hidden}a,button{font:inherit;color:inherit}a{text-decoration:none}button{appearance:none;border:0;outline:0;background:transparent;padding:0;margin:0;cursor:pointer}::selection{background:#a72b25;color:#fff}
+:root{--black:#050505;--paper:#ece9e1;--ink:#111;--red:#a72b25;--blue:#17389f;--yellow:#ded043;--white:#f5f4ef;--sans:"Space Grotesk",sans-serif;--display:"Archivo Black",sans-serif;--narrow:"Archivo Narrow",sans-serif;--mono:"DM Mono",monospace;--page-pad:clamp(24px,4vw,72px);--content-width:1500px}
+.site{width:100%;min-height:100vh}.page{display:none;width:100%;min-height:100vh;position:relative;isolation:isolate}.page.active{display:block}.page-inner{width:min(calc(100% - (var(--page-pad)*2)),var(--content-width));margin:0 auto}.eyebrow,.tiny{font-family:var(--mono);text-transform:uppercase}.eyebrow{font-size:11px;line-height:1.5;letter-spacing:.12em}.tiny{font-size:10px;line-height:1.5;letter-spacing:.08em}
+/* NOISE */
+.film-noise{position:fixed;inset:0;width:100%;height:100%;z-index:18000;pointer-events:none;opacity:.06;mix-blend-mode:screen;image-rendering:pixelated}
+/* NAV */
+.site-nav{position:fixed;inset:0 0 auto 0;z-index:22000;display:flex;justify-content:space-between;align-items:center;padding:23px var(--page-pad);pointer-events:none;mix-blend-mode:difference}.nav-brand,.nav-links button{color:inherit}.nav-brand{display:inline-flex;align-items:baseline;gap:10px;pointer-events:auto;font-family:var(--mono);font-size:11px;line-height:1;letter-spacing:.08em;text-transform:uppercase}.nav-brand strong{font-family:var(--display);font-size:17px;letter-spacing:-.04em}.nav-links{display:flex;align-items:center;gap:clamp(18px,2.5vw,40px)}.nav-links button{pointer-events:auto;font-family:var(--mono);font-size:10px;line-height:1.5;letter-spacing:.08em;text-transform:uppercase;position:relative}.nav-links button::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.2,.7,.2,1)}.nav-links button:hover::after,.nav-links button.active::after{transform:scaleX(1);transform-origin:left}
+/* HOME */
+#home{background:var(--black);color:var(--white);min-height:100svh}.home-stage{min-height:100svh;padding:clamp(110px,13vh,160px) var(--page-pad) 40px;display:flex;flex-direction:column;justify-content:center;align-items:center}.home-title{width:min(100%,1500px);margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;animation:homeTitleIn .01s linear forwards;animation-delay:.35s}.home-title .main-word{position:relative;display:block;font-family:var(--sans);font-weight:600;font-size:clamp(120px,19vw,340px);line-height:.76;letter-spacing:-.085em;white-space:nowrap;opacity:0;animation:home1917In 1.2s cubic-bezier(.16,1,.3,1) forwards;animation-delay:.42s}.home-title .sub-word{display:block;margin:clamp(24px,3.5vw,48px) auto 0;font-family:var(--sans);font-size:clamp(34px,5vw,78px);line-height:.9;font-weight:500;letter-spacing:-.07em;text-align:center;opacity:0;animation:homeProducoesIn 1s cubic-bezier(.16,1,.3,1) forwards;animation-delay:1.65s}.home-title .main-word::before,.home-title .main-word::after,.home-title .sub-word::before,.home-title .sub-word::after{content:attr(data-text);position:absolute;inset:0;pointer-events:none;opacity:0;overflow:hidden}.home-title .main-word::before,.home-title .sub-word::before{color:var(--red);transform:translateX(-3px);clip-path:inset(0 0 65% 0);animation:glitchRed 6s steps(1,end) infinite}.home-title .main-word::after,.home-title .sub-word::after{color:var(--blue);transform:translateX(3px);clip-path:inset(62% 0 8% 0);animation:glitchBlue 6s steps(1,end) infinite}.home-footer{position:absolute;left:var(--page-pad);right:var(--page-pad);bottom:40px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px}.home-footer-left{display:flex;flex-direction:column;gap:7px}.home-project-link{display:inline-flex;align-items:center;gap:14px;font-family:var(--mono);font-size:10px;line-height:1.5;letter-spacing:.08em;text-transform:uppercase}.home-project-link span{width:38px;height:1px;background:currentColor;transition:width .35s ease}.home-project-link:hover span{width:65px}
+@keyframes homeTitleIn{to{opacity:1}}@keyframes home1917In{0%{opacity:0;filter:blur(12px);transform:translate3d(0,75px,0) scale(.9)}55%{opacity:1;filter:blur(1px);transform:translate3d(0,-8px,0) scale(1.015)}100%{opacity:1;filter:blur(0);transform:translate3d(0,0,0) scale(1)}}@keyframes homeProducoesIn{0%{opacity:0;filter:blur(8px);transform:translate3d(0,35px,0) scale(.97)}60%{opacity:.92;filter:blur(0);transform:translate3d(0,-3px,0) scale(1.005)}100%{opacity:.9;filter:blur(0);transform:translate3d(0,0,0) scale(1)}}@keyframes glitchRed{0%,86%,100%{opacity:0}87%{opacity:.65;transform:translate3d(-3px,0,0)}88%{opacity:0;transform:translate3d(5px,-2px,0)}89%{opacity:.7;transform:translate3d(-4px,1px,0)}90%{opacity:0}97%{opacity:.45;transform:translate3d(2px,0,0)}98%{opacity:0}}@keyframes glitchBlue{0%,78%,100%{opacity:0}79%{opacity:.55;transform:translate3d(3px,1px,0)}80%{opacity:0}82%{opacity:.65;transform:translate3d(-5px,0,0)}83%{opacity:0;transform:translate3d(5px,-1px,0)}84%{opacity:.5}85%{opacity:0}}
+/* PROJECT */
+#projetos{background:var(--paper);color:var(--ink)}.project-page{padding:145px 0 120px}.project-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.78fr);gap:clamp(50px,8vw,130px);align-items:center}.project-copy{min-width:0;max-width:820px}.project-kicker{margin-bottom:25px;color:#55524c}.project-title{margin:0;font-family:var(--display);font-size:clamp(58px,8vw,145px);line-height:.86;letter-spacing:-.065em;overflow-wrap:break-word}.project-title span{display:block}.project-lead{margin:clamp(42px,6vw,80px) 0 0;max-width:720px;padding-left:clamp(0px,4vw,70px);font-size:clamp(19px,1.55vw,27px);line-height:1.5}.project-visual-wrap{min-width:0}.project-visual{width:100%;aspect-ratio:4/5;background:#121212;position:relative;overflow:hidden}.project-visual::before{content:"";position:absolute;inset:0;background:linear-gradient(130deg,transparent 0 45%,rgba(255,255,255,.07) 45.2%,transparent 45.5%);opacity:.5}.project-visual-main{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:40px}.project-visual-main span{color:var(--white);font-family:var(--display);font-size:clamp(75px,11vw,190px);line-height:.8;letter-spacing:-.08em;transform:rotate(-90deg);white-space:nowrap}.project-cut{position:absolute;width:38%;height:18%;top:11%;right:-4%;background:var(--red);transform:rotate(-8deg)}.project-meta{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:18px;font-family:var(--mono);font-size:10px;line-height:1.5;text-transform:uppercase;letter-spacing:.08em}.project-meta-item{padding-top:12px;border-top:1px solid rgba(17,17,17,.24)}.project-meta-label{display:block;color:#716e67;margin-bottom:5px}
+/* PROJECT STORY */
+.project-story{margin-top:clamp(120px,17vw,240px)}.story-intro{display:grid;grid-template-columns:minmax(220px,.36fr) minmax(0,1fr);gap:50px;padding-bottom:clamp(70px,9vw,120px);border-bottom:1px solid rgba(17,17,17,.18)}.story-label{font-family:var(--display);font-size:clamp(30px,4vw,62px);line-height:.92;letter-spacing:-.055em;margin:0}.story-intro-copy{max-width:930px}.story-intro-copy p{margin:0 0 30px;font-size:clamp(18px,1.3vw,23px);line-height:1.68}.story-intro-copy p:last-child{margin-bottom:0}
+/* ARCHIVE GALLERY */
+.archive-section{margin-top:clamp(105px,15vw,210px)}.archive-heading{display:grid;grid-template-columns:minmax(220px,.36fr) minmax(0,1fr);gap:50px;align-items:end;margin-bottom:clamp(45px,6vw,80px)}.archive-heading h2{margin:0;font-family:var(--display);font-size:clamp(31px,4vw,62px);line-height:.92;letter-spacing:-.055em}.archive-heading p{margin:0;max-width:840px;font-size:clamp(17px,1.22vw,21px);line-height:1.65}.archive-gallery{display:grid;grid-template-columns:1.15fr 1fr;gap:18px;align-items:stretch}.archive-gallery-item{margin:0;position:relative;overflow:hidden;background:#171717;min-width:0}.archive-gallery-item:first-child{grid-row:span 2}.archive-gallery-item img{width:100%;height:100%;display:block;object-fit:cover;filter:grayscale(1) contrast(.98);transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .5s ease}.archive-gallery-item:first-child img{min-height:680px}.archive-gallery-item:not(:first-child) img{min-height:320px}.archive-gallery-item:hover img{transform:scale(1.025);filter:grayscale(.72) contrast(1.02)}.archive-caption{display:flex;justify-content:space-between;gap:20px;position:absolute;left:0;right:0;bottom:0;padding:15px 18px;background:linear-gradient(to top,rgba(0,0,0,.68),transparent);color:#fff;font-family:var(--mono);font-size:9px;line-height:1.4;letter-spacing:.08em;text-transform:uppercase}.archive-caption span:last-child{text-align:right}
+/* REGIONS */
+.regions-section{margin-top:clamp(100px,14vw,190px)}.regions-heading{display:grid;grid-template-columns:minmax(220px,.36fr) minmax(0,1fr);gap:50px;align-items:end;margin-bottom:clamp(55px,7vw,90px)}.regions-heading h2{margin:0;font-family:var(--display);font-size:clamp(31px,4vw,62px);line-height:.92;letter-spacing:-.055em}.regions-heading p{margin:0;max-width:820px;font-size:clamp(17px,1.22vw,21px);line-height:1.65}.region-list{border-top:1px solid rgba(17,17,17,.2)}.region-item{display:grid;grid-template-columns:minmax(190px,.35fr) minmax(0,1fr);gap:clamp(40px,7vw,110px);padding:clamp(45px,6vw,85px) 0;border-bottom:1px solid rgba(17,17,17,.2)}.region-name{display:flex;flex-direction:column;gap:10px;min-width:0}.region-number{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:#706d66}.region-name h3{margin:0;font-family:var(--display);font-size:clamp(42px,5vw,78px);line-height:.86;letter-spacing:-.065em;overflow-wrap:break-word}.region-copy{max-width:820px}.region-copy p{margin:0;font-size:clamp(16px,1.18vw,20px);line-height:1.72}
+/* PEOPLE */
+.people-section{margin-top:clamp(120px,17vw,240px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(300px,.75fr);gap:clamp(50px,10vw,160px);align-items:start}.people-title{margin:0;font-family:var(--display);font-size:clamp(65px,9vw,145px);line-height:.78;letter-spacing:-.075em}.people-title span{display:block}.people-copy{max-width:700px;padding-top:10px}.people-copy p{margin:0 0 28px;font-size:clamp(17px,1.22vw,21px);line-height:1.7}.people-copy p:last-child{margin-bottom:0}
+/* MUSIC */
+.music-section{margin-top:clamp(120px,17vw,240px);padding:clamp(65px,8vw,110px) 0;border-top:1px solid rgba(17,17,17,.2);border-bottom:1px solid rgba(17,17,17,.2)}.music-header{display:grid;grid-template-columns:minmax(220px,.36fr) minmax(0,1fr);gap:50px;margin-bottom:clamp(55px,7vw,90px)}.music-header h2{margin:0;font-family:var(--display);font-size:clamp(31px,4vw,62px);line-height:.92;letter-spacing:-.055em}.music-header p{margin:0;max-width:850px;font-size:clamp(17px,1.22vw,21px);line-height:1.65}.music-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid rgba(17,17,17,.2)}.music-item{padding:35px 30px 38px 0;border-bottom:1px solid rgba(17,17,17,.2)}.music-item:nth-child(odd){border-right:1px solid rgba(17,17,17,.2);padding-right:45px}.music-item:nth-child(even){padding-left:45px}.music-item h3{margin:0 0 13px;font-family:var(--narrow);font-size:clamp(42px,5vw,72px);line-height:.85;letter-spacing:-.04em}.music-item p{margin:0;max-width:570px;font-size:clamp(15px,1.08vw,18px);line-height:1.65}
+/* PRODUCTION */
+.production-section{margin-top:clamp(120px,17vw,240px)}.production-grid{display:grid;grid-template-columns:minmax(220px,.36fr) minmax(0,1fr);gap:50px}.production-grid h2{margin:0;font-family:var(--display);font-size:clamp(31px,4vw,62px);line-height:.92;letter-spacing:-.055em}.production-copy{max-width:940px}.production-copy>p{margin:0 0 35px;font-size:clamp(18px,1.28vw,22px);line-height:1.68}.production-list{margin-top:60px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.production-card{padding:28px 24px 30px;background:var(--ink);color:var(--white);min-height:210px;display:flex;flex-direction:column;justify-content:space-between}.production-card-number{font-family:var(--mono);font-size:10px;color:#aaa8a2;letter-spacing:.08em}.production-card strong{display:block;font-family:var(--narrow);font-size:clamp(26px,2.8vw,44px);line-height:.9;letter-spacing:-.03em}.production-card span{display:block;margin-top:14px;font-size:13px;line-height:1.5;color:#cdcbc5}
+.project-final{margin-top:clamp(120px,17vw,240px);padding:clamp(50px,7vw,90px) 0 0;border-top:1px solid rgba(17,17,17,.2)}.project-final p{max-width:1150px;margin:0;font-family:var(--narrow);font-size:clamp(38px,5vw,78px);line-height:.98;letter-spacing:-.035em}
+/* SUPPORT */
+#apoio{background:var(--yellow);color:var(--ink)}.support-page{padding:140px 0 100px}.support-header{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:clamp(50px,9vw,150px);align-items:end}.support-title{margin:0;font-family:var(--display);font-size:clamp(76px,12vw,210px);line-height:.8;letter-spacing:-.08em}.support-intro{max-width:620px;padding-bottom:5px}.support-intro .eyebrow{margin-bottom:22px}.support-intro p{margin:0;font-size:clamp(18px,1.4vw,24px);line-height:1.55}.support-number{margin-top:70px;font-family:var(--display);font-size:clamp(100px,19vw,320px);line-height:.75;letter-spacing:-.09em;color:rgba(0,0,0,.08);overflow:hidden;white-space:nowrap}.support-ribbon{width:min(980px,100%);margin:clamp(60px,8vw,110px) auto 0;padding:17px 24px;background:var(--red);color:var(--white);font-family:var(--mono);font-size:10px;line-height:1.5;letter-spacing:.09em;text-transform:uppercase;transform:rotate(-1.5deg)}.support-details{margin-top:clamp(100px,15vw,220px);display:grid;grid-template-columns:minmax(220px,.38fr) minmax(0,1fr);gap:50px}.support-details h2{margin:0;font-family:var(--display);font-size:clamp(28px,3.5vw,55px);line-height:.95;letter-spacing:-.055em}.support-content{max-width:930px}.support-content p{margin:0 0 26px;font-size:clamp(16px,1.17vw,20px);line-height:1.7}.support-facts{margin-top:55px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(17,17,17,.25);border-bottom:1px solid rgba(17,17,17,.25)}.support-fact{padding:22px 20px;border-right:1px solid rgba(17,17,17,.25)}.support-fact:last-child{border-right:0}.support-fact strong{display:block;font-family:var(--display);font-size:clamp(30px,4vw,62px);line-height:.9;letter-spacing:-.06em;margin-bottom:14px}.support-fact span{display:block;font-family:var(--mono);font-size:9px;line-height:1.5;text-transform:uppercase;letter-spacing:.07em}
+/* ABOUT */
+#sobre{background:var(--paper);color:var(--ink)}.about-page{padding:140px 0 110px}.about-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.55fr);gap:clamp(50px,9vw,150px);align-items:start}.about-title{margin:0;font-family:var(--display);font-size:clamp(88px,15vw,250px);line-height:.76;letter-spacing:-.09em;overflow-wrap:break-word}.about-intro{padding-top:12px;max-width:620px}.about-intro p{margin:0;font-size:clamp(20px,1.65vw,28px);line-height:1.45}.about-strip{margin-top:clamp(90px,13vw,190px);padding:clamp(35px,4vw,65px) clamp(25px,4vw,65px);background:var(--red);color:var(--white);display:grid;grid-template-columns:minmax(180px,.36fr) minmax(0,1fr);gap:40px}.about-strip-label{font-family:var(--mono);font-size:10px;line-height:1.5;text-transform:uppercase;letter-spacing:.08em}.about-strip-copy{margin:0;max-width:950px;font-family:var(--narrow);font-size:clamp(34px,4.4vw,72px);line-height:.98;letter-spacing:-.035em}.about-body{margin-top:clamp(90px,13vw,180px);display:grid;grid-template-columns:minmax(220px,.36fr) minmax(0,1fr);gap:50px}.about-body-title{margin:0;font-family:var(--display);font-size:clamp(27px,3.4vw,54px);line-height:.95;letter-spacing:-.055em}.about-body-copy{max-width:900px;font-size:clamp(16px,1.17vw,20px);line-height:1.7}.about-body-copy p{margin:0 0 28px}.about-body-copy p:last-child{margin-bottom:0}
+/* PROCESS */
+#processo{background:var(--black);color:var(--white)}.process-page{padding:140px 0 110px}.process-head{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.65fr);gap:clamp(70px,10vw,160px);align-items:start}.process-title-wrap{min-width:0}.process-title{margin:0;width:100%;max-width:850px;font-family:var(--display);font-size:clamp(72px,10.5vw,175px);line-height:.82;letter-spacing:-.075em;overflow-wrap:break-word}.process-intro{width:100%;max-width:560px;min-width:0;padding-top:10px}.process-intro .eyebrow{color:#a7a59f;margin:0 0 24px}.process-intro p{margin:0;width:100%;max-width:560px;font-size:clamp(17px,1.3vw,23px);line-height:1.62;overflow-wrap:break-word}.process-list{margin-top:clamp(100px,15vw,220px);border-top:1px solid rgba(245,244,239,.25)}.process-item{display:grid;grid-template-columns:minmax(75px,.18fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);padding:clamp(38px,5vw,72px) 0;border-bottom:1px solid rgba(245,244,239,.25)}.process-number{font-family:var(--mono);font-size:11px;line-height:1.5;color:#9d9b95}.process-content{min-width:0}.process-word{margin:0 0 28px;font-family:var(--narrow);font-size:clamp(60px,10vw,160px);line-height:.78;font-weight:700;letter-spacing:-.055em;overflow-wrap:break-word}.process-description{width:100%;max-width:760px;margin:0;font-size:clamp(16px,1.18vw,20px);line-height:1.7;color:#d0cec8;overflow-wrap:break-word}.process-mark{display:inline-flex;align-items:center;justify-content:center;margin-top:32px;width:42px;height:42px;border:1px solid rgba(245,244,239,.35);font-family:var(--mono);font-size:11px;transition:transform .45s cubic-bezier(.2,.7,.2,1),background .45s ease,color .45s ease}.process-item:hover .process-mark{transform:rotate(45deg);background:var(--blue);color:var(--white)}
+/* CONTACT */
+#contato{background:var(--blue);color:var(--white)}.contact-page{padding:140px 0 90px;min-height:100vh;display:flex;flex-direction:column}.contact-main{flex:1;display:flex;justify-content:center;flex-direction:column}.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.45fr);gap:clamp(60px,10vw,170px);align-items:end}.contact-title{margin:0;font-family:var(--display);font-size:clamp(80px,14vw,235px);line-height:.76;letter-spacing:-.09em;overflow-wrap:break-word}.contact-side{padding-bottom:12px;min-width:0}.contact-side .eyebrow{color:rgba(245,244,239,.6);margin-bottom:22px}.contact-email{display:inline-block;max-width:100%;font-family:var(--narrow);font-size:clamp(28px,4vw,58px);line-height:.95;letter-spacing:-.03em;overflow-wrap:anywhere;border-bottom:1px solid rgba(245,244,239,.5);padding-bottom:8px;transition:opacity .3s ease}.contact-email:hover{opacity:.65}.contact-bottom{margin-top:100px;padding-top:20px;border-top:1px solid rgba(245,244,239,.28);display:flex;justify-content:space-between;align-items:flex-end;gap:30px}.contact-bottom-left{display:flex;flex-direction:column;gap:7px}.contact-bottom-right{text-align:right}
+/* TRANSITION */
+.transition{position:fixed;inset:0;z-index:20000;visibility:hidden;opacity:0;pointer-events:none;overflow:hidden;background:var(--black);isolation:isolate}.transition.active{visibility:visible;opacity:1}.transition-black{position:absolute;inset:0;background:var(--black)}.transition-plane{position:absolute;top:-15%;left:-12%;width:124%;height:130%;transform:translateX(118%) skewX(-12deg);will-change:transform;transition:transform .72s cubic-bezier(.77,0,.175,1)}.transition-red{z-index:1;background:var(--red);transition-delay:.03s}.transition-paper{z-index:2;background:var(--paper);transform:translateX(125%) skewX(-12deg);transition-delay:.1s}.transition-brand{position:absolute;z-index:5;top:50%;left:50%;width:min(90vw,900px);transform:translate(-50%,-50%) scale(.93);opacity:0;color:var(--ink);text-align:center;pointer-events:none;transition:opacity .35s ease,transform .65s cubic-bezier(.2,.7,.2,1)}.transition-brand .brand-main{display:block;font-family:var(--sans);font-weight:600;font-size:clamp(85px,18vw,300px);line-height:.72;letter-spacing:-.085em}.transition-brand .brand-sub{display:block;margin:28px auto 0;width:max-content;font-family:var(--sans);font-weight:500;font-size:clamp(30px,5vw,75px);line-height:.9;letter-spacing:-.045em;opacity:0;transform:translateY(20px);transition:opacity .4s ease .38s,transform .5s cubic-bezier(.2,.7,.2,1) .38s}.transition.covering .transition-red,.transition.covering .transition-paper{transform:translateX(0) skewX(-12deg)}.transition.covering .transition-brand{opacity:1;transform:translate(-50%,-50%) scale(1)}.transition.covering .transition-brand .brand-sub{opacity:1;transform:translateY(0)}.transition.leaving .transition-red{transform:translateX(-125%) skewX(-12deg)}.transition.leaving .transition-paper{transform:translateX(-132%) skewX(-12deg)}.transition.leaving .transition-brand{opacity:0;transform:translate(-50%,-50%) scale(1.04)}.transition.leaving .transition-brand .brand-sub{opacity:0;transform:translateY(-15px)}
+/* CURSOR */
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:30000;opacity:0}.cursor-dot{width:7px;height:7px;border-radius:50%;background:currentColor}.cursor-ring{width:35px;height:35px;border:1px solid currentColor;border-radius:50%;transition:width .25s ease,height .25s ease,opacity .25s ease}body.cursor-ready .cursor-dot,body.cursor-ready .cursor-ring{opacity:1}body.cursor-hover .cursor-ring{width:55px;height:55px}
+/* RESPONSIVE */
+@media(max-width:1000px){.project-hero{grid-template-columns:1fr;gap:60px}.project-copy{max-width:900px}.project-visual{max-width:680px}.people-section{grid-template-columns:1fr}.production-list{grid-template-columns:1fr 1fr}.archive-gallery{grid-template-columns:1fr 1fr}.archive-gallery-item:first-child{grid-row:auto}.archive-gallery-item:first-child img,.archive-gallery-item:not(:first-child) img{min-height:360px}}
+@media(max-width:800px){.site-nav{padding:18px var(--page-pad)}.nav-brand{display:none}.nav-links{width:100%;justify-content:space-between;gap:10px}.nav-links button{font-size:9px}.home-stage{padding-top:100px}.home-title .main-word{font-size:clamp(87px,24vw,170px);white-space:nowrap}.home-title .sub-word{margin-top:24px;font-size:clamp(34px,10vw,65px)}.home-footer{left:var(--page-pad);right:var(--page-pad);bottom:25px;align-items:flex-start;flex-direction:column;gap:18px}.home-footer-right{text-align:left}.project-page,.support-page,.about-page,.process-page,.contact-page{padding-top:105px}.story-intro,.regions-heading,.production-grid,.music-header,.about-hero,.support-header,.contact-grid{grid-template-columns:1fr;gap:30px}.region-item{grid-template-columns:1fr;gap:25px}.music-list{grid-template-columns:1fr}.music-item,.music-item:nth-child(odd),.music-item:nth-child(even){padding:30px 0;border-right:0}.production-list{grid-template-columns:1fr}.archive-gallery{grid-template-columns:1fr}.archive-gallery-item:first-child img,.archive-gallery-item:not(:first-child) img{min-height:280px}.support-title{font-size:clamp(72px,18vw,145px)}.support-number{font-size:clamp(90px,25vw,170px);margin-top:50px}.support-details,.about-body{grid-template-columns:1fr;gap:35px}.support-facts{grid-template-columns:1fr}.support-fact{border-right:0;border-bottom:1px solid rgba(17,17,17,.25)}.support-fact:last-child{border-bottom:0}.about-title{font-size:clamp(80px,21vw,160px)}.about-strip{grid-template-columns:1fr}.process-head{grid-template-columns:1fr;gap:45px}.process-title{max-width:100%;font-size:clamp(72px,20vw,160px)}.process-intro{max-width:640px;padding-top:0}.process-intro p{max-width:100%}.process-item{grid-template-columns:1fr;gap:20px}.process-word{font-size:clamp(62px,18vw,125px)}.contact-title{font-size:clamp(80px,21vw,170px)}.contact-bottom{flex-direction:column;align-items:flex-start}.contact-bottom-right{text-align:left}.transition-brand .brand-main{font-size:clamp(75px,22vw,160px)}.transition-brand .brand-sub{font-size:clamp(28px,8vw,58px)}}
+@media(max-width:520px){.project-meta{grid-template-columns:1fr}.nav-links{gap:8px}.nav-links button{font-size:8px}.project-final p{font-size:clamp(34px,10vw,52px)}.archive-caption{font-size:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.film-noise{display:none}}
+</style>
+</head>
+<body>
+<canvas id="filmNoise" class="film-noise" aria-hidden="true"></canvas>
+<nav class="site-nav">
+  <button class="nav-brand nav-page-button" data-page="home" type="button" aria-label="Ir para o início"><strong>1917</strong><span>Produções</span></button>
+  <div class="nav-links">
+    <button type="button" class="nav-page-button" data-page="projetos">Projetos</button>
+    <button type="button" class="nav-page-button" data-page="apoio">Apoio</button>
+    <button type="button" class="nav-page-button" data-page="sobre">Sobre</button>
+    <button type="button" class="nav-page-button" data-page="processo">Processo</button>
+    <button type="button" class="nav-page-button" data-page="contato">Contato</button>
+  </div>
+</nav>
+<div class="transition" id="transition" aria-hidden="true">
+  <div class="transition-black"></div>
+  <div class="transition-plane transition-red"></div>
+  <div class="transition-plane transition-paper"></div>
+  <div class="transition-brand"><span class="brand-main">1917</span><span class="brand-sub">Produções</span></div>
+</div>
+<div class="cursor-dot"></div><div class="cursor-ring"></div>
+<main class="site">
+
+<section class="page active" id="home" data-page-section="home">
+  <div class="home-stage">
+    <div class="home-title">
+      <div class="glitch main-word" data-text="1917">1917</div>
+      <div class="glitch sub-word" data-text="Produções">Produções</div>
+    </div>
+    <div class="home-footer">
+      <div class="home-footer-left"><span class="tiny">Audiovisual</span><span class="tiny">Música</span><span class="tiny">Cultura</span></div>
+      <div class="home-footer-right"><button type="button" class="home-project-link nav-page-button" data-page="projetos"><span></span>Ver projetos</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="projetos" data-page-section="projetos">
+<div class="project-page page-inner">
+  <div class="project-hero">
+    <div class="project-copy">
+      <div class="project-kicker eyebrow">Projeto em produção</div>
+      <h1 class="project-title"><span>Memórias</span><span>Sonoras</span></h1>
+      <p class="project-lead">Uma websérie documental que investiga como a música participou da formação de São Paulo, acompanhando suas transformações a partir de cinco regiões da cidade e das memórias de quem viveu esses processos.</p>
+    </div>
+    <div class="project-visual-wrap">
+      <div class="project-visual"><div class="project-cut"></div><div class="project-visual-main"><span>SP</span></div></div>
+      <div class="project-meta">
+        <div class="project-meta-item"><span class="project-meta-label">Formato</span>Websérie documental audiovisual</div>
+        <div class="project-meta-item"><span class="project-meta-label">Episódios</span>03</div>
+        <div class="project-meta-item"><span class="project-meta-label">Duração</span>25–30 min</div>
+        <div class="project-meta-item"><span class="project-meta-label">Gravações</span>10 jornadas profissionais</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-story">
+    <div class="story-intro">
+      <h2 class="story-label">A obra</h2>
+      <div class="story-intro-copy">
+        <p>São Paulo também pode ser contada pelo que se ouviu.</p>
+        <p>A cidade cresceu, se transformou, recebeu populações de diferentes lugares e criou novos modos de viver, trabalhar, circular e ocupar seus territórios. Nesse processo, a música não esteve apenas nos palcos. Ela esteve nas ruas, nos bairros, nos clubes, nas escolas, nas festas, nas igrejas, nos bares, nos bailes, nas rádios, nos estúdios improvisados e nos encontros entre pessoas.</p>
+        <p><strong>Memórias Sonoras</strong> parte dessa relação entre música e cidade para investigar como diferentes experiências musicais ajudaram a formar São Paulo e suas culturas urbanas.</p>
+        <p>Samba, pagode, rock, MPB, rap, forró, baião, frevo, xote, repente e outras expressões e tradições musicais aparecem como pontos de entrada para essa investigação. O projeto também observa os processos pelos quais essas linguagens se encontraram em São Paulo, foram reinterpretadas em novos contextos e passaram a fazer parte da vida cultural de diferentes bairros e gerações.</p>
+        <p>A presença nordestina ocupa um lugar importante nessa história. Os deslocamentos de homens e mulheres nordestinos para São Paulo trouxeram repertórios, práticas culturais, formas de sociabilidade e modos próprios de viver a música, que passaram a dialogar com as linguagens já existentes na cidade.</p>
+        <p>A música, portanto, não é tratada apenas como trilha sonora da história de São Paulo. Ela é um dos lugares onde essa história aconteceu.</p>
+      </div>
+    </div>
+
+    <div class="archive-section">
+      <div class="archive-heading">
+        <h2>Imagens<br>de arquivo.</h2>
+        <p>O documentário também trabalha com imagens que ajudam a perceber a cidade em movimento: festas, ruas, apresentações, públicos e manifestações musicais que registram diferentes momentos da vida cultural paulistana.</p>
+      </div>
+      <div class="archive-gallery">
+        <figure class="archive-gallery-item">
+          <img src="assets/arquivo-carnaval.png" alt="Registro histórico de manifestação carnavalesca em São Paulo">
+          <figcaption class="archive-caption"><span>Arquivo / carnaval</span><span>São Paulo</span></figcaption>
+        </figure>
+        <figure class="archive-gallery-item">
+          <img src="assets/arquivo-rock.png" alt="Registro histórico de apresentação musical diante de público">
+          <figcaption class="archive-caption"><span>Arquivo / rock</span><span>música urbana</span></figcaption>
+        </figure>
+        <figure class="archive-gallery-item">
+          <img src="assets/arquivo-folia.png" alt="Registro histórico de manifestação musical e popular">
+          <figcaption class="archive-caption"><span>Arquivo / manifestação</span><span>cultura popular</span></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="regions-section">
+      <div class="regions-heading">
+        <h2>Cinco regiões,<br>muitas cidades.</h2>
+        <p>A cidade será investigada a partir do Centro, Norte, Sul, Leste e Oeste. Cada região será observada a partir de seus próprios territórios, histórias, personagens, circuitos culturais e experiências musicais.</p>
+      </div>
+      <div class="region-list">
+        <article class="region-item"><div class="region-name"><span class="region-number">01</span><h3>Centro</h3></div><div class="region-copy"><p>A investigação observa os espaços históricos de circulação cultural e as diferentes camadas de uma cidade que recebeu artistas, trabalhadores, migrantes e diferentes formas de expressão. O Centro aparece como espaço de encontro, passagem, trabalho, boemia, circulação musical e disputa por memória.</p></div></article>
+        <article class="region-item"><div class="region-name"><span class="region-number">02</span><h3>Norte</h3></div><div class="region-copy"><p>A música é observada a partir das redes culturais, bairros e trajetórias que ajudaram a construir identidades próprias na região. A pesquisa busca perceber encontros entre diferentes gerações, referências musicais e experiências de migração, trabalho e formação cultural.</p></div></article>
+        <article class="region-item"><div class="region-name"><span class="region-number">03</span><h3>Sul</h3></div><div class="region-copy"><p>A Zona Sul será observada a partir de trajetórias culturais e musicais que atravessaram bairros, comunidades e gerações. A investigação procura compreender como diferentes cenas musicais, relações comunitárias e experiências periféricas participaram da produção cultural da cidade.</p></div></article>
+        <article class="region-item"><div class="region-name"><span class="region-number">04</span><h3>Leste</h3></div><div class="region-copy"><p>Em uma região marcada pelo crescimento urbano, pela presença de trabalhadores e pela criação de circuitos culturais próprios, a música aparece como forma de encontro, expressão, pertencimento e construção de comunidade. Também será observado como referências trazidas por famílias migrantes passaram a integrar a vida musical local.</p></div></article>
+        <article class="region-item"><div class="region-name"><span class="region-number">05</span><h3>Oeste</h3></div><div class="region-copy"><p>A obra investiga relações entre espaços culturais, movimentos artísticos, transformações urbanas e trajetórias musicais que produziram outras imagens e experiências da cidade. O objetivo é perceber como diferentes cenas e públicos construíram circuitos de criação e circulação cultural.</p></div></article>
+      </div>
+    </div>
+
+    <div class="people-section">
+      <h2 class="people-title"><span>As histórias</span><span>que ficaram</span><span>fora do centro.</span></h2>
+      <div class="people-copy">
+        <p>Para compreender esses processos, a websérie olha para além das trajetórias mais conhecidas.</p>
+        <p>São Paulo também foi construída por pessoas que raramente aparecem nas narrativas oficiais: músicos de bairro, produtores, radialistas, donos de espaços, trabalhadores, frequentadores de bailes, organizadores de festas, colecionadores, moradores antigos e jovens que formaram bandas, grupos e cenas locais.</p>
+        <p>Entre essas trajetórias estão homens e mulheres nordestinos que chegaram à cidade, construíram suas vidas em diferentes bairros e mantiveram, transformaram e combinaram repertórios trazidos de seus lugares de origem com as linguagens musicais encontradas em São Paulo.</p>
+        <p>São essas memórias que podem revelar como determinada música chegou a um bairro, como um gênero ganhou novos significados, como um espaço se tornou ponto de encontro ou como uma geração encontrou na música uma maneira de ocupar a cidade.</p>
+        <p>A partir dessas vozes, documentos, fotografias, gravações, objetos, arquivos e registros do presente, a obra aproxima diferentes tempos de São Paulo.</p>
+      </div>
+    </div>
+
+    <div class="music-section">
+      <div class="music-header"><h2>Música como<br>transformação.</h2><p>Os gêneros e movimentos musicais serão tratados como portas de entrada para compreender relações sociais, culturais e territoriais. A pergunta não é apenas quais músicas foram produzidas ou ouvidas, mas o que essas músicas fizeram na cidade.</p></div>
+      <div class="music-list">
+        <article class="music-item"><h3>Samba</h3><p>As relações entre território, memória, festa, sociabilidade e cultura popular ajudam a perceber como o samba participou da construção de diferentes experiências urbanas paulistanas.</p></article>
+        <article class="music-item"><h3>Pagode</h3><p>A investigação acompanha sua circulação por bairros, rodas, encontros e diferentes circuitos sociais, observando sua relação com novas formas de sociabilidade e identidade cultural.</p></article>
+        <article class="music-item"><h3>Rock</h3><p>Bandas, espaços, casas de show, estúdios e públicos revelam outra dimensão da formação musical da cidade e das transformações de seus circuitos culturais.</p></article>
+        <article class="music-item"><h3>MPB</h3><p>A MPB permite observar relações entre produção musical, indústria cultural, rádio, televisão, circulação de artistas e mudanças no imaginário urbano brasileiro.</p></article>
+        <article class="music-item"><h3>Rap</h3><p>O rap oferece uma perspectiva fundamental sobre território, juventude, desigualdade, identidade, linguagem e formas de expressão criadas em bairros periféricos da cidade.</p></article>
+        <article class="music-item"><h3>Nordeste</h3><p>Forró, baião, frevo, xote, repente e outras tradições mostram como repertórios trazidos por migrantes nordestinos foram preservados, transformados e incorporados à vida cultural de São Paulo.</p></article>
+      </div>
+    </div>
+
+    <div class="production-section">
+      <div class="production-grid">
+        <h2>Uma cidade<br>contada por<br>seus moradores.</h2>
+        <div class="production-copy">
+          <p>A premissa de <strong>Memórias Sonoras</strong> é compreender a formação musical de São Paulo por meio do ponto de vista de quem viveu essas transformações.</p>
+          <p>A websérie combina entrevistas, pesquisa documental, registros de território, arquivos históricos, fotografias, sons e imagens do presente. A câmera acompanha os lugares onde as histórias aconteceram; a pesquisa procura seus vestígios; e a música ajuda a estabelecer as conexões entre memória individual, história coletiva e transformação urbana.</p>
+          <div class="production-list">
+            <div class="production-card"><span class="production-card-number">01</span><div><strong>Entrevistas</strong><span>Moradores, personagens, músicos, pesquisadores e agentes culturais.</span></div></div>
+            <div class="production-card"><span class="production-card-number">02</span><div><strong>Território</strong><span>Ruas, bairros, espaços musicais, locais de memória e vida cotidiana.</span></div></div>
+            <div class="production-card"><span class="production-card-number">03</span><div><strong>Arquivo</strong><span>Fotografias, documentos, gravações, objetos e registros históricos.</span></div></div>
+            <div class="production-card"><span class="production-card-number">04</span><div><strong>Som</strong><span>Vozes, músicas, ambientes, arquivos sonoros e paisagens acústicas.</span></div></div>
+            <div class="production-card"><span class="production-card-number">05</span><div><strong>Imagem</strong><span>Registros audiovisuais construídos nos próprios territórios.</span></div></div>
+            <div class="production-card"><span class="production-card-number">06</span><div><strong>Montagem</strong><span>Relação entre memória, documento, entrevista, música e território.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-final"><p>O resultado será uma websérie documental audiovisual de três episódios, com aproximadamente 25 a 30 minutos cada, construída a partir de dez jornadas profissionais de gravação e investigação. Mais do que reunir histórias sobre música, <strong>Memórias Sonoras</strong> pretende construir um retrato de São Paulo a partir daquilo que seus territórios guardaram: vozes, ritmos, lembranças, deslocamentos, conflitos, encontros e formas de criação.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="page" id="apoio" data-page-section="apoio"><div class="support-page page-inner"><div class="support-header"><h1 class="support-title">Apoio</h1><div class="support-intro"><div class="eyebrow">Lei Rouanet</div><p>Empresas podem participar da realização do projeto por meio do incentivo fiscal à cultura, associando sua marca a uma obra audiovisual dedicada à memória musical de São Paulo.</p></div></div><div class="support-number">4%</div><div class="support-ribbon">Projeto aprovado para captação pelo Ministério da Cultura</div><div class="support-details"><h2>Como participar</h2><div class="support-content"><p>Pessoas jurídicas tributadas pelo Lucro Real podem apoiar projetos culturais incentivados, observados os limites e as condições previstos na legislação.</p><p>No âmbito do Artigo 18 da Lei de Incentivo à Cultura, determinados projetos podem permitir dedução integral dos valores incentivados, conforme o enquadramento legal e as regras vigentes.</p><p>O apoio pode ocorrer nas modalidades previstas pela legislação de incentivo. A associação da marca ao projeto deve seguir as regras de comunicação e aplicação de marcas estabelecidas pelo Ministério da Cultura.</p><div class="support-facts"><div class="support-fact"><strong>Art. 18</strong><span>Enquadramento do projeto</span></div><div class="support-fact"><strong>PJ</strong><span>Pessoa jurídica tributada pelo Lucro Real</span></div><div class="support-fact"><strong>PF</strong><span>Pessoa física dentro dos limites legais</span></div></div></div></div></div></section>
+
+<section class="page" id="sobre" data-page-section="sobre"><div class="about-page page-inner"><div class="about-hero"><h1 class="about-title">Sobre</h1><div class="about-intro"><p>A 1917 Produções trabalha a partir da realidade para construir obras audiovisuais, sonoras e culturais.</p></div></div><div class="about-strip"><div class="about-strip-label">Princípio</div><p class="about-strip-copy">A realidade não é apenas o tema. É a matéria de onde a obra parte.</p></div><div class="about-body"><h2 class="about-body-title">Do real<br>à obra.</h2><div class="about-body-copy"><p>Trabalhamos com pesquisa, produção audiovisual, música, som, montagem e construção narrativa. Cada projeto parte de uma realidade específica e procura encontrar uma forma própria de apresentá-la.</p><p>Não buscamos transformar toda história em uma mesma linguagem. O método de trabalho se adapta ao projeto, ao território, às pessoas envolvidas e ao material encontrado durante o processo.</p><p>A produção é entendida como uma relação entre pesquisa e realização: observar, investigar, criar e produzir.</p></div></div></div></section>
+
+<section class="page" id="processo" data-page-section="processo"><div class="process-page page-inner"><div class="process-head"><div class="process-title-wrap"><h1 class="process-title">Processo</h1></div><div class="process-intro"><div class="eyebrow">Quatro movimentos</div><p>Antes da primeira nota tocar. Antes da câmera ser ligada. Existe o momento em que a gente chega, escuta e olha. Um lugar tem seus ruídos. Uma pessoa tem suas pausas. Uma história deixa rastros. É desse contato com o que existe — e com aquilo que ainda não foi revelado — que cada projeto começa. O trabalho se organiza em quatro movimentos: observar, pesquisar, criar e produzir.</p></div></div><div class="process-list"><article class="process-item"><div class="process-number">01</div><div class="process-content"><h2 class="process-word">Observar</h2><p class="process-description">Chegamos antes da gravação. Caminhamos pelo lugar, escutamos seus sons, percebemos seus ritmos e prestamos atenção ao que normalmente passa despercebido. Uma conversa, uma rua, um objeto, uma fotografia, uma pausa ou um silêncio podem revelar tanto quanto uma entrevista.</p><span class="process-mark">+</span></div></article><article class="process-item"><div class="process-number">02</div><div class="process-content"><h2 class="process-word">Pesquisar</h2><p class="process-description">Depois de olhar, vamos atrás dos vestígios. Arquivos, jornais, fotografias, discos, documentos, mapas, depoimentos, gravações antigas e relatos pessoais ajudam a reconstruir o contexto de cada história. Cruzamos essas fontes com o que encontramos no presente.</p><span class="process-mark">+</span></div></article><article class="process-item"><div class="process-number">03</div><div class="process-content"><h2 class="process-word">Criar</h2><p class="process-description">É aqui que o material começa a encontrar uma forma. Escolhemos onde colocar a câmera, como registrar uma voz, o que deixar em silêncio, qual som permanece em primeiro plano e quando uma imagem deve durar. A linguagem nasce do encontro com a matéria.</p><span class="process-mark">+</span></div></article><article class="process-item"><div class="process-number">04</div><div class="process-content"><h2 class="process-word">Produzir</h2><p class="process-description">Então colocamos tudo em movimento. Pré-produção, equipe, equipamentos, gravações, entrevistas, captação de som, edição, montagem, desenho sonoro, mixagem, finalização e entrega. Cada etapa transforma uma ideia em algo que pode ser visto, ouvido e compartilhado.</p><span class="process-mark">+</span></div></article></div></div></section>
+
+<section class="page" id="contato" data-page-section="contato"><div class="contact-page page-inner"><div class="contact-main"><div class="contact-grid"><h1 class="contact-title">Contato</h1><div class="contact-side"><div class="eyebrow">Fale conosco</div><a class="contact-email" href="mailto:contato@1917producoes.com">contato@1917producoes.com</a></div></div></div><div class="contact-bottom"><div class="contact-bottom-left"><span class="tiny">1917 Produções</span><span class="tiny">Audiovisual / Música / Cultura</span></div><div class="contact-bottom-right"><span class="tiny">Transforma a realidade em obra.</span></div></div></div></section>
+</main>
+<script>
+(() => {
+  'use strict';
+  const body=document.body;
+  const transition=document.getElementById('transition');
+  const canvas=document.getElementById('filmNoise');
+  const ctx=canvas.getContext('2d');
+  const pages=[...document.querySelectorAll('.page')];
+  const buttons=[...document.querySelectorAll('.nav-page-button')];
+  let currentPage='home';
+  let animating=false;
+
+  const wait=ms=>new Promise(r=>setTimeout(r,ms));
+  const getPage=name=>document.querySelector(`[data-page-section="${name}"]`);
+  function updateNav(name){buttons.forEach(b=>b.classList.toggle('active',b.dataset.page===name));}
+  function restartHome(){
+    const title=document.querySelector('#home .home-title');
+    const main=document.querySelector('#home .main-word');
+    const sub=document.querySelector('#home .sub-word');
+    if(!title||!main||!sub)return;
+    title.style.animation='none';
+    main.style.animation='none';
+    sub.style.animation='none';
+    void title.offsetHeight;
+    title.style.animation='';
+    main.style.animation='';
+    sub.style.animation='';
+  }
+  function activatePage(name){
+    pages.forEach(p=>p.classList.remove('active'));
+    const page=getPage(name);
+    if(!page)return;
+    page.classList.add('active');
+    currentPage=name;
+    updateNav(name);
+    window.scrollTo({top:0,left:0,behavior:'auto'});
+    if(name==='home')restartHome();
+  }
+  function resetTransition(){
+    transition.classList.remove('active','covering','leaving');
+    transition.style.visibility='hidden';
+    transition.style.opacity='0';
+    body.classList.remove('is-transitioning');
+  }
+  async function navigateTo(name){
+    if(!name||name===currentPage||animating||!getPage(name))return;
+    animating=true;
+    body.classList.add('is-transitioning');
+    transition.style.visibility='visible';
+    transition.style.opacity='1';
+    transition.classList.remove('leaving','covering');
+    transition.classList.add('active');
+    await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+    transition.classList.add('covering');
+    await wait(780);
+    activatePage(name);
+    await wait(300);
+    transition.classList.remove('covering');
+    transition.classList.add('leaving');
+    await wait(780);
+    resetTransition();
+    animating=false;
+  }
+  buttons.forEach(b=>b.addEventListener('click',()=>navigateTo(b.dataset.page)));
+  document.addEventListener('keydown',e=>{const map={'1':'home','2':'projetos','3':'apoio','4':'sobre','5':'processo','6':'contato'};if(map[e.key])navigateTo(map[e.key])});
+
+  let noiseW=256,noiseH=144;
+  function resizeNoise(){const aspect=window.innerWidth/Math.max(window.innerHeight,1);noiseW=aspect>1.5?256:192;noiseH=aspect>1.5?144:192;canvas.width=noiseW;canvas.height=noiseH;}
+  function drawNoise(){
+    const data=ctx.createImageData(noiseW,noiseH);
+    for(let i=0;i<data.data.length;i+=4){const v=Math.random()*255|0;data.data[i]=v;data.data[i+1]=v;data.data[i+2]=v;data.data[i+3]=92;}
+    ctx.putImageData(data,0,0);
+  }
+  function noiseLoop(){drawNoise();setTimeout(()=>requestAnimationFrame(noiseLoop),50);}
+  window.addEventListener('resize',resizeNoise);resizeNoise();noiseLoop();
+
+  const dot=document.querySelector('.cursor-dot');
+  const ring=document.querySelector('.cursor-ring');
+  let mx=0,my=0,rx=0,ry=0;
+  function cursorLoop(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;requestAnimationFrame(cursorLoop)}
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;body.classList.add('cursor-ready')});
+  document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>body.classList.add('cursor-hover'));el.addEventListener('mouseleave',()=>body.classList.remove('cursor-hover'))});
+  cursorLoop();
+  updateNav(currentPage);
+  activatePage('home');
+  if(window.matchMedia('(hover:none),(pointer:coarse)').matches)body.classList.remove('cursor-ready');
+})();
+</script>
+</body>
+</html>
