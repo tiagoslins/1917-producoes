@@ -1,5 +1,6 @@
 (() => {
   const body = document.body;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const menu = document.querySelector('.mobile-menu');
   const open = document.querySelector('[data-menu-open]');
   const close = document.querySelector('[data-menu-close]');
@@ -17,6 +18,41 @@
   menu?.addEventListener('click', (e) => { if (e.target === menu) setMenu(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
+  let transition = null;
+  if (!reducedMotion) {
+    transition = document.createElement('div');
+    transition.className = 'page-transition';
+    transition.setAttribute('aria-hidden', 'true');
+    transition.innerHTML = '<div class="page-transition__band"></div><div class="page-transition__band"></div><div class="page-transition__band"></div><div class="page-transition__brand">1917<span>Produções</span></div>';
+    body.appendChild(transition);
+
+    requestAnimationFrame(() => {
+      body.classList.add('is-ready');
+      requestAnimationFrame(() => transition.classList.add('is-revealing'));
+    });
+
+    window.setTimeout(() => {
+      transition?.classList.add('is-done');
+      if (transition) transition.style.visibility = 'hidden';
+    }, 1050);
+  } else {
+    body.classList.add('is-ready');
+  }
+
+  const navigate = (url) => {
+    setMenu(false);
+    if (reducedMotion || !transition) {
+      location.href = url.href;
+      return;
+    }
+    body.classList.add('is-leaving');
+    transition.style.visibility = 'visible';
+    transition.className = 'page-transition is-entering';
+    void transition.offsetWidth;
+    requestAnimationFrame(() => transition.classList.add('run'));
+    window.setTimeout(() => { location.href = url.href; }, 720);
+  };
+
   document.querySelectorAll('a[href]').forEach((a) => {
     const href = a.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || a.target === '_blank') return;
@@ -24,15 +60,24 @@
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
       const url = new URL(a.href, location.href);
       if (url.origin !== location.origin) return;
+      if (url.pathname === location.pathname && url.hash === location.hash) return;
       e.preventDefault();
-      setMenu(false);
-      body.classList.add('is-leaving');
-      setTimeout(() => { location.href = url.href; }, 190);
+      navigate(url);
     });
   });
 
+  window.addEventListener('pageshow', (event) => {
+    if (!event.persisted) return;
+    body.classList.remove('is-leaving');
+    body.classList.add('is-ready');
+    if (transition) {
+      transition.className = 'page-transition is-revealing';
+      transition.style.visibility = 'hidden';
+    }
+  });
+
   const canvas = document.querySelector('.noise');
-  if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (canvas && !reducedMotion) {
     const ctx = canvas.getContext('2d', { alpha: true });
     const resize = () => {
       canvas.width = window.innerWidth > 900 ? 240 : 150;
@@ -48,6 +93,6 @@
     };
     resize(); draw();
     window.addEventListener('resize', resize, { passive:true });
-    setInterval(draw, 90);
+    window.setInterval(draw, 90);
   }
 })();

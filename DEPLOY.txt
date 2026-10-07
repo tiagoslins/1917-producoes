@@ -4,3 +4,5 @@ Substitua os arquivos correspondentes do repositório pelos arquivos deste pacot
 Mantenha a estrutura de pastas exatamente como está.
 As rotas /cultura/, /musica/ e /audiovisual/ foram preservadas apenas como redirecionamentos para /projetos/.
 CNAME: 1917producoes.com.br
+
+IMPORTANTE — imagens existentes em /assets/: mantenha arquivo-carnaval.png, arquivo-folia.png e arquivo-rock.png. Esta versão passa a utilizá-las no catálogo e na página Memórias Sonoras.
