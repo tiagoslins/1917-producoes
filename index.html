@@ -141,6 +141,32 @@ h1,h2,h3,p { max-width:100%; }
   .contact-title, .about-title { font-size:clamp(70px,20vw,105px); }
 }
 
+
+/* PROJECTS V2 — editorial catalog */
+.project-filterbar{display:flex;flex-wrap:wrap;gap:9px;margin:30px 0 56px;padding-top:22px;border-top:1px solid rgba(17,17,17,.16)}
+.project-filter{appearance:none;border:1px solid rgba(17,17,17,.28);background:transparent;border-radius:999px;padding:9px 14px;font:9px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.project-filter:hover,.project-filter.active{background:#111;color:#f1eee7;border-color:#111}
+.projects-editorial{display:grid;gap:84px}
+.project-editorial-card{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:34px;padding:0 0 52px;border-bottom:1px solid rgba(17,17,17,.2);text-align:left;width:100%;transition:opacity .25s ease,transform .45s cubic-bezier(.2,.7,.2,1)}
+.project-editorial-card[hidden]{display:none}
+.project-editorial-card:hover{transform:translateY(-5px)}
+.project-editorial-visual{position:relative;min-height:clamp(360px,49vw,720px);overflow:hidden;background:#171717;color:#f1eee7}
+.project-editorial-visual img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s ease}
+.project-editorial-card:hover .project-editorial-visual img{transform:scale(1.025);filter:grayscale(.25)}
+.project-editorial-visual.typographic{display:flex;align-items:flex-end;padding:clamp(22px,3vw,44px);background:linear-gradient(145deg,#241d1b,#6b1f19 60%,#d9d1c4);color:#f4efe7}
+.project-editorial-visual.typographic.dark{background:linear-gradient(145deg,#0d0d0d,#262626 55%,#777)}
+.project-editorial-visual strong{font-family:var(--display);font-size:clamp(52px,8vw,126px);font-weight:500;line-height:.76;letter-spacing:-.075em}
+.project-editorial-index{position:absolute;top:18px;left:20px;font:9px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;z-index:2}
+.project-editorial-info{display:flex;flex-direction:column;justify-content:space-between;padding:6px 0 2px}
+.project-editorial-info h2{margin:0;font-family:var(--display);font-size:clamp(48px,6vw,92px);font-weight:500;line-height:.82;letter-spacing:-.07em}
+.project-editorial-type{margin-top:18px;font:9px/1.55 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#66635d}
+.project-editorial-description{margin:40px 0 0;max-width:520px;font-size:16px;line-height:1.7}
+.project-editorial-meta{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px;padding-top:20px;border-top:1px solid rgba(17,17,17,.18)}
+.project-editorial-meta div{font-size:13px;line-height:1.45}.project-editorial-meta span{display:block;margin-bottom:7px;font:8px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#77736b}
+.project-editorial-open{margin-top:34px;font:9px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.projects-empty{display:none;padding:70px 0;border-top:1px solid rgba(17,17,17,.2);font-size:18px}
+@media(max-width:800px){.project-filterbar{margin-bottom:40px}.projects-editorial{gap:58px}.project-editorial-card{grid-template-columns:1fr;gap:24px}.project-editorial-visual{min-height:72vw}.project-editorial-info h2{font-size:clamp(46px,15vw,82px)}.project-editorial-description{margin-top:26px}.project-editorial-meta{margin-top:32px}}
+
 </style>
 
 <style>
@@ -344,14 +370,36 @@ h1,h2,h3,p { max-width:100%; }
   <div class="catalog-page page-inner">
     <div class="catalog-head">
       <h1 class="catalog-title">Projetos</h1>
-      <div class="catalog-intro"><div class="eyebrow">Catálogo 1917</div><p>Projetos culturais e audiovisuais em desenvolvimento, produção e circulação. Cada obra parte de uma questão, uma pesquisa, um território e uma forma própria de realização.</p></div>
+      <div class="catalog-intro"><div class="eyebrow">Catálogo 1917</div><p>Projetos em desenvolvimento, produção e circulação. Obras construídas a partir de pesquisa, território, música, imagem e diferentes formas de realização.</p></div>
     </div>
-    <div class="catalog-list">
-      <button class="catalog-item nav-page-button" data-page="velvet" type="button"><span class="catalog-number">01</span><div class="catalog-main"><h2>The<br>Velvet Margin</h2><div class="catalog-tags">Música · Audiovisual · Memória · Cidade</div></div><div class="catalog-description">Projeto musical e audiovisual que articula música negra, cidade, memória e patrimônio a partir de uma obra autoral e de sua relação com o território.</div><div class="catalog-arrow">↗</div></button>
-      <button class="catalog-item nav-page-button" data-page="memorias" type="button"><span class="catalog-number">02</span><div class="catalog-main"><h2>Memórias<br>Sonoras</h2><div class="catalog-tags">Documentário · Música · Memória · Território</div><span class="catalog-status">Em desenvolvimento</span></div><div class="catalog-description">Websérie documental sobre a memória da cultura musical paulistana e sobre como a música participou da formação social, cultural e territorial de São Paulo.</div><div class="catalog-arrow">↗</div></button>
-      <button class="catalog-item nav-page-button" data-page="sociedade" type="button"><span class="catalog-number">03</span><div class="catalog-main"><h2>Sociedade<br>em Debate</h2><div class="catalog-tags">Entrevista · Pesquisa · Sociedade · Brasil</div><span class="catalog-status">Em desenvolvimento</span></div><div class="catalog-description">Série de entrevistas com pesquisadores e intelectuais sobre história, cultura, economia, política, instituições, ciência, tecnologia e os caminhos possíveis para o Brasil.</div><div class="catalog-arrow">↗</div></button>
+
+    <div class="project-filterbar" aria-label="Filtrar projetos">
+      <button class="project-filter active" type="button" data-filter="todos">Todos</button>
+      <button class="project-filter" type="button" data-filter="cultura">Cultura</button>
+      <button class="project-filter" type="button" data-filter="musica">Música</button>
+      <button class="project-filter" type="button" data-filter="audiovisual">Audiovisual</button>
+      <button class="project-filter" type="button" data-filter="desenvolvimento">Desenvolvimento</button>
     </div>
-    <div class="catalog-archive"><h2>Arquivo /<br>projetos anteriores</h2><p>O arquivo será ampliado à medida que novas obras, registros e trabalhos realizados pela 1917 forem incorporados ao catálogo. A intenção é registrar a produção da empresa e construir uma memória pública dos trabalhos realizados.</p></div>
+
+    <div class="projects-editorial">
+      <button class="project-editorial-card nav-page-button" data-page="memorias" data-categories="cultura audiovisual desenvolvimento" type="button">
+        <span class="project-editorial-visual"><span class="project-editorial-index">01 / 03</span><img src="/assets/arquivo-carnaval.png" alt="Arquivo visual relacionado ao projeto Memórias Sonoras"></span>
+        <span class="project-editorial-info"><span><h2>Memórias<br>Sonoras</h2><span class="project-editorial-type">Websérie documental audiovisual · Cultura · Memória · Território</span><span class="project-editorial-description">Uma investigação documental sobre como a música participa da construção de São Paulo e de sua memória cultural, aproximando pessoas, lugares, arquivos e diferentes tempos da cidade.</span></span><span><span class="project-editorial-meta"><div><span>Status</span>Em desenvolvimento</div><div><span>Território</span>São Paulo</div><div><span>Formato</span>Websérie documental</div><div><span>Produção</span>1917 Produções</div></span><span class="project-editorial-open">Abrir projeto ↗</span></span></span>
+      </button>
+
+      <button class="project-editorial-card nav-page-button" data-page="velvet" data-categories="cultura musica audiovisual" type="button">
+        <span class="project-editorial-visual typographic"><span class="project-editorial-index">02 / 03</span><strong>THE<br>VELVET<br>MARGIN</strong></span>
+        <span class="project-editorial-info"><span><h2>The Velvet<br>Margin</h2><span class="project-editorial-type">Música · Audiovisual · Cultura · Cidade</span><span class="project-editorial-description">Projeto musical e audiovisual que articula obra autoral, memória, território e patrimônio, tratando som e imagem como partes de uma mesma experiência.</span></span><span><span class="project-editorial-meta"><div><span>Status</span>Em captação</div><div><span>Mecanismo</span>ProAC ICMS</div><div><span>Campo</span>Música + audiovisual</div><div><span>Produção</span>1917 Produções</div></span><span class="project-editorial-open">Abrir projeto ↗</span></span></span>
+      </button>
+
+      <button class="project-editorial-card nav-page-button" data-page="sociedade" data-categories="cultura audiovisual desenvolvimento" type="button">
+        <span class="project-editorial-visual typographic dark"><span class="project-editorial-index">03 / 03</span><strong>SOCIEDADE<br>EM<br>DEBATE</strong></span>
+        <span class="project-editorial-info"><span><h2>Sociedade<br>em Debate</h2><span class="project-editorial-type">Entrevista · Pesquisa · Sociedade · Brasil</span><span class="project-editorial-description">Série de entrevistas com pesquisadores e intelectuais para discutir história, cultura, economia, política, instituições, ciência, tecnologia e questões contemporâneas do Brasil.</span></span><span><span class="project-editorial-meta"><div><span>Status</span>Em desenvolvimento</div><div><span>Formato</span>Série de entrevistas</div><div><span>Campo</span>Pesquisa + audiovisual</div><div><span>Produção</span>1917 Produções</div></span><span class="project-editorial-open">Abrir projeto ↗</span></span></span>
+      </button>
+    </div>
+    <div class="projects-empty">Nenhum projeto deste campo foi publicado ainda.</div>
+
+    <div class="catalog-archive"><h2>Arquivo /<br>projetos anteriores</h2><p>O catálogo será ampliado à medida que novas obras e trabalhos realizados pela 1917 forem incorporados. O arquivo funciona também como memória pública da produção da empresa.</p></div>
   </div>
 </section>
 
@@ -428,6 +476,22 @@ h1,h2,h3,p { max-width:100%; }
   const menuClose=document.getElementById('menuClose');
   const pages=[...document.querySelectorAll('.page')];
   const buttons=[...document.querySelectorAll('.nav-page-button')];
+
+  const projectFilters=[...document.querySelectorAll('.project-filter')];
+  const projectCards=[...document.querySelectorAll('.project-editorial-card')];
+  const projectsEmpty=document.querySelector('.projects-empty');
+  projectFilters.forEach(filter=>filter.addEventListener('click',()=>{
+    const value=filter.dataset.filter;
+    projectFilters.forEach(item=>item.classList.toggle('active',item===filter));
+    let visible=0;
+    projectCards.forEach(card=>{
+      const categories=(card.dataset.categories||'').split(' ');
+      const show=value==='todos'||categories.includes(value);
+      card.hidden=!show;
+      if(show) visible++;
+    });
+    if(projectsEmpty) projectsEmpty.style.display=visible?'none':'block';
+  }));
   let currentPage='home';
   let animating=false;
   const wait=ms=>new Promise(r=>setTimeout(r,ms));
