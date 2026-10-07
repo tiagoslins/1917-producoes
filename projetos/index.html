@@ -199,6 +199,41 @@ h1,h2,h3,p { max-width:100%; }
 #audiovisual .ca-v6-manifest{padding-bottom:110px}.av-v6-frame{margin-top:15px;aspect-ratio:2.1/1;overflow:hidden;background:#111}.av-v6-frame img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
 @media(max-width:800px){.ca-v6{padding-top:110px}.ca-v6-hero,.ca-v6-manifest,.ca-v6-feature-head,.ca-v6-feature-copy{grid-template-columns:1fr;gap:35px}.ca-v6-hero h1{font-size:clamp(90px,29vw,165px)}.ca-v6-manifest-copy{grid-template-columns:1fr;gap:25px}.ca-v6-field{grid-template-columns:42px 1fr;gap:18px}.ca-v6-field p{grid-column:2}.ca-v6-image-grid,.ca-v6-related-grid{grid-template-columns:1fr}.ca-v6-image{min-height:310px}.ca-v6-image-grid .ca-v6-image:nth-child(2){display:none}.ca-v6-project,.ca-v6-project-content{min-height:330px}.ca-v6-end{flex-direction:column;gap:18px}}
 
+
+/* V7 — arquitetura enxuta + responsividade editorial */
+html,body{max-width:100%;overflow-x:hidden}
+.menu-list{max-height:72vh;display:flex;flex-direction:column;justify-content:center}
+.menu-item{min-height:clamp(62px,9vh,104px)}
+.catalog-head,.process-head,.about-hero,.partners-head,.contact-grid{gap:clamp(28px,5vw,88px)}
+.project-editorial-info h2{overflow-wrap:anywhere}
+.project-editorial-description,.catalog-intro p,.process-intro p,.about-intro p,.partners-lead{max-width:38rem}
+@media (max-width:1100px){
+ .project-editorial-card{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,52px)}
+ .project-editorial-info h2{font-size:clamp(44px,7vw,76px);line-height:.88}
+ .project-editorial-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+ .page-inner{padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px)}
+ .catalog-head,.process-head,.about-hero,.contact-grid{grid-template-columns:1fr!important}
+ .catalog-title,.process-title,.about-title,.partners-title,.contact-title{font-size:clamp(58px,16vw,104px)!important;line-height:.86!important;max-width:100%}
+ .project-filterbar{display:flex;overflow-x:auto;gap:8px;padding-bottom:10px;scrollbar-width:none}
+ .project-filterbar::-webkit-scrollbar{display:none}.project-filter{flex:0 0 auto}
+ .project-editorial-card{grid-template-columns:1fr!important;gap:24px;padding:32px 0}
+ .project-editorial-visual{min-height:0;aspect-ratio:16/10}
+ .project-editorial-info{min-height:0;gap:30px}.project-editorial-info h2{font-size:clamp(48px,14vw,78px);line-height:.88}
+ .project-editorial-description{margin-top:24px!important;font-size:clamp(17px,4.4vw,21px);line-height:1.35}
+ .project-editorial-meta{grid-template-columns:1fr 1fr;gap:18px 12px}
+ .process-item{grid-template-columns:48px minmax(0,1fr)!important}.process-word{font-size:clamp(46px,13vw,78px)!important;overflow-wrap:anywhere}
+ .partners-grid,.contact-routes{grid-template-columns:1fr!important}
+}
+@media (max-width:520px){
+ .nav-brand{left:18px}.menu-trigger{right:18px}.menu-panel{padding-left:20px;padding-right:20px}
+ .home-footer-left{gap:10px;flex-wrap:wrap}.home-manifest-words span{font-size:clamp(42px,13vw,68px)}
+ .project-editorial-meta{grid-template-columns:1fr}.project-editorial-type{line-height:1.35}
+ .dossier-title{font-size:clamp(54px,17vw,88px)!important;line-height:.82!important}.dossier-hero{grid-template-columns:1fr!important}
+ .dossier-meta{grid-template-columns:1fr 1fr!important}
+ .contact-email{font-size:clamp(18px,5.2vw,28px);overflow-wrap:anywhere}
+}
 </style>
 
 <style>
@@ -345,6 +380,41 @@ h1,h2,h3,p { max-width:100%; }
     margin-top:48px;
   }
 }
+
+/* V7 — arquitetura enxuta + responsividade editorial */
+html,body{max-width:100%;overflow-x:hidden}
+.menu-list{max-height:72vh;display:flex;flex-direction:column;justify-content:center}
+.menu-item{min-height:clamp(62px,9vh,104px)}
+.catalog-head,.process-head,.about-hero,.partners-head,.contact-grid{gap:clamp(28px,5vw,88px)}
+.project-editorial-info h2{overflow-wrap:anywhere}
+.project-editorial-description,.catalog-intro p,.process-intro p,.about-intro p,.partners-lead{max-width:38rem}
+@media (max-width:1100px){
+ .project-editorial-card{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,52px)}
+ .project-editorial-info h2{font-size:clamp(44px,7vw,76px);line-height:.88}
+ .project-editorial-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+ .page-inner{padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px)}
+ .catalog-head,.process-head,.about-hero,.contact-grid{grid-template-columns:1fr!important}
+ .catalog-title,.process-title,.about-title,.partners-title,.contact-title{font-size:clamp(58px,16vw,104px)!important;line-height:.86!important;max-width:100%}
+ .project-filterbar{display:flex;overflow-x:auto;gap:8px;padding-bottom:10px;scrollbar-width:none}
+ .project-filterbar::-webkit-scrollbar{display:none}.project-filter{flex:0 0 auto}
+ .project-editorial-card{grid-template-columns:1fr!important;gap:24px;padding:32px 0}
+ .project-editorial-visual{min-height:0;aspect-ratio:16/10}
+ .project-editorial-info{min-height:0;gap:30px}.project-editorial-info h2{font-size:clamp(48px,14vw,78px);line-height:.88}
+ .project-editorial-description{margin-top:24px!important;font-size:clamp(17px,4.4vw,21px);line-height:1.35}
+ .project-editorial-meta{grid-template-columns:1fr 1fr;gap:18px 12px}
+ .process-item{grid-template-columns:48px minmax(0,1fr)!important}.process-word{font-size:clamp(46px,13vw,78px)!important;overflow-wrap:anywhere}
+ .partners-grid,.contact-routes{grid-template-columns:1fr!important}
+}
+@media (max-width:520px){
+ .nav-brand{left:18px}.menu-trigger{right:18px}.menu-panel{padding-left:20px;padding-right:20px}
+ .home-footer-left{gap:10px;flex-wrap:wrap}.home-manifest-words span{font-size:clamp(42px,13vw,68px)}
+ .project-editorial-meta{grid-template-columns:1fr}.project-editorial-type{line-height:1.35}
+ .dossier-title{font-size:clamp(54px,17vw,88px)!important;line-height:.82!important}.dossier-hero{grid-template-columns:1fr!important}
+ .dossier-meta{grid-template-columns:1fr 1fr!important}
+ .contact-email{font-size:clamp(18px,5.2vw,28px);overflow-wrap:anywhere}
+}
 </style></head>
 <body>
 <canvas id="filmNoise" class="film-noise" aria-hidden="true"></canvas>
@@ -357,13 +427,10 @@ h1,h2,h3,p { max-width:100%; }
     <div class="menu-overlay-top"><span class="menu-overlay-label">1917 Produções / Navegação</span><button class="menu-close" id="menuClose" type="button">Fechar ×</button></div>
     <div class="menu-grid">
       <button class="menu-item nav-page-button" data-page="projetos" type="button"><span>Projetos</span><span>01</span></button>
-      <button class="menu-item nav-page-button" data-page="cultura" type="button"><span>Cultura</span><span>02</span></button>
-      <button class="menu-item nav-page-button" data-page="musica" type="button"><span>Música</span><span>03</span></button>
-      <button class="menu-item nav-page-button" data-page="audiovisual" type="button"><span>Audiovisual</span><span>04</span></button>
-      <button class="menu-item nav-page-button" data-page="processo" type="button"><span>Desenvolvimento</span><span>05</span></button>
-      <button class="menu-item nav-page-button" data-page="sobre" type="button"><span>Sobre</span><span>06</span></button>
-      <button class="menu-item nav-page-button" data-page="parceiros" type="button"><span>Parceiros</span><span>07</span></button>
-      <button class="menu-item nav-page-button" data-page="contato" type="button"><span>Contato</span><span>08</span></button>
+      <button class="menu-item nav-page-button" data-page="processo" type="button"><span>Desenvolvimento</span><span>02</span></button>
+      <button class="menu-item nav-page-button" data-page="sobre" type="button"><span>Sobre</span><span>03</span></button>
+      <button class="menu-item nav-page-button" data-page="parceiros" type="button"><span>Parceiros</span><span>04</span></button>
+      <button class="menu-item nav-page-button" data-page="contato" type="button"><span>Contato</span><span>05</span></button>
     </div>
     <div class="menu-overlay-note"><span>Produção cultural / musical / audiovisual</span><span>São Paulo · Brasil</span></div>
   </div>
@@ -488,10 +555,6 @@ h1,h2,h3,p { max-width:100%; }
   <div class="dossier-page page-inner dark"><div class="dossier-hero"><div><div class="eyebrow dossier-kicker">Projeto / entrevista e pesquisa</div><h1 class="dossier-title">Sociedade<br>em Debate</h1></div><div><p class="dossier-subtitle">Uma série de entrevistas dedicada a pensar o Brasil por meio da história, cultura, economia, política, instituições, ciência, tecnologia e transformação social.</p><div class="dossier-meta"><div><strong>Status</strong>Em desenvolvimento</div><div><strong>Formato</strong>Série de entrevistas</div><div><strong>Escala</strong>Brasil</div><div><strong>Realização</strong>1917 Produções</div></div></div></div><div class="dossier-blocks"><article class="dossier-block"><h2>01 — O projeto</h2><div class="dossier-copy"><p>Sociedade em Debate propõe conversas aprofundadas com pesquisadores, professores e intelectuais de diferentes áreas para discutir problemas e possibilidades do Brasil contemporâneo.</p><p>A série procura construir um espaço de reflexão pública sem reduzir temas complexos a respostas rápidas.</p></div></article><article class="dossier-block"><h2>02 — Campos</h2><div class="dossier-copy"><div class="dossier-grid"><div class="dossier-card"><span>01</span><strong>História<br>e cultura</strong></div><div class="dossier-card"><span>02</span><strong>Economia<br>e trabalho</strong></div><div class="dossier-card"><span>03</span><strong>Política<br>e instituições</strong></div><div class="dossier-card"><span>04</span><strong>Ciência<br>e tecnologia</strong></div><div class="dossier-card"><span>05</span><strong>Sociedade<br>e território</strong></div><div class="dossier-card"><span>06</span><strong>Brasil<br>e futuro</strong></div></div></div></article><article class="dossier-block"><h2>03 — Pesquisa</h2><div class="dossier-copy"><p>A seleção dos entrevistados e dos temas parte de instituições acadêmicas, centros de pesquisa e trajetórias intelectuais de diferentes regiões do país, buscando evitar uma leitura exclusivamente concentrada em São Paulo.</p></div></article><article class="dossier-block"><h2>04 — Produção</h2><div class="dossier-copy"><p>As entrevistas são conduzidas e produzidas pela 1917 Produções, com planejamento de pesquisa, preparação editorial, gravação audiovisual, edição e publicação digital.</p></div></article><article class="dossier-block"><h2>05 — Equipe</h2><div class="dossier-copy"><p><strong>Entrevistas e desenvolvimento:</strong> Tiago Lins / 1917 Produções.</p></div></article></div><div class="dossier-foot"><span>Sociedade em Debate</span><span>1917 Produções</span></div></div>
 </section>
 
-<section class="page" id="cultura" data-page-section="cultura">
-  <div class="ca-v6 page-inner">
-    <header class="ca-v6-hero"><div><span class="eyebrow">1917 / Campo de atuação</span><h1>Cultura</h1></div><div><p class="ca-v6-lead">Memória, território, pesquisa, patrimônio e cidade. A cultura aparece na 1917 como matéria de investigação e como espaço de criação de obras.</p><button class="inline-link nav-page-button" data-page="memorias">Conhecer Memórias Sonoras <span>↗</span></button></div></header>
-    <section class="ca-v6-manifest"><span class="eyebrow">01 / Perspectiva</span><div><h2>Cultura não é cenário.<br>É relação.</h2><div class="ca-v6-manifest-copy"><p>Os projetos partem de pessoas, práticas, documentos, lugares e conflitos. A pesquisa não antecede apenas a obra: ela participa da construção de sua linguagem.</p><p>Memória e patrimônio são tratados como processos vivos — aquilo que permanece, desaparece, circula, muda de sentido e continua produzindo a cidade.</p></div></div></section>
     <section><div class="ca-v6-fields"><article class="ca-v6-field"><span>01</span><h3>Memória</h3><p>Histórias orais, documentos, imagens, objetos e experiências aproximam diferentes tempos sem transformar o passado em ilustração.</p></article><article class="ca-v6-field"><span>02</span><h3>Território</h3><p>O espaço participa da narrativa. Ruas, bairros, equipamentos culturais e circuitos revelam relações sociais e formas de ocupar a cidade.</p></article><article class="ca-v6-field"><span>03</span><h3>Pesquisa</h3><p>Levantamento bibliográfico, documental e territorial orienta personagens, recortes, perguntas e decisões de linguagem.</p></article><article class="ca-v6-field"><span>04</span><h3>Patrimônio</h3><p>Práticas, espaços e repertórios são observados pelas disputas de memória e pelos sentidos que assumem no presente.</p></article><article class="ca-v6-field"><span>05</span><h3>Música</h3><p>A música aparece como prática social, documento, trabalho, circulação e experiência — uma forma de ler transformações culturais.</p></article><article class="ca-v6-field"><span>06</span><h3>Cidade</h3><p>A vida urbana é investigada a partir de quem produz, ocupa, transforma e atribui significado aos seus territórios.</p></article></div></section>
     <section class="ca-v6-feature"><div class="ca-v6-feature-head"><span class="eyebrow">02 / Projeto em foco</span><h2>Memórias<br>Sonoras</h2></div><div class="ca-v6-image-grid"><button class="ca-v6-image nav-page-button" data-page="memorias"><img src="/assets/arquivo-carnaval.png" alt="Arquivo relacionado a Memórias Sonoras"></button><button class="ca-v6-image nav-page-button" data-page="memorias"><img src="/assets/arquivo-rock.png" alt="Arquivo relacionado à cultura musical paulistana"></button></div><div class="ca-v6-feature-copy"><p><strong>Memórias Sonoras — São Paulo: memória da cultura musical paulistana</strong> investiga como experiências musicais participaram da formação da cidade e de sua memória cultural.</p><p>A obra aproxima pesquisa histórica, documental e territorial, história oral e realização audiovisual para observar relações entre música, migração, trabalho, circulação, memória e transformação urbana.</p></div><button class="inline-link nav-page-button" data-page="memorias">Abrir projeto <span>↗</span></button></section>
     <section class="ca-v6-related"><div class="ca-v6-feature-head"><span class="eyebrow">03 / Cultura em obra</span><h2>Projetos que atravessam o campo.</h2></div><div class="ca-v6-related-grid"><button class="ca-v6-project has-image nav-page-button" data-page="velvet"><img src="/assets/the-velvet-margin-hero.jpg" alt="The Velvet Margin"><span class="ca-v6-project-content"><small>Música · Cidade · Patrimônio</small><h3>The Velvet<br>Margin</h3><span class="ca-v6-project-arrow">↗</span></span></button><button class="ca-v6-project nav-page-button" data-page="sociedade"><small>Pesquisa · Sociedade · Brasil</small><h3>Sociedade<br>em Debate</h3><span class="ca-v6-project-arrow">↗</span></button></div></section>
@@ -499,15 +562,6 @@ h1,h2,h3,p { max-width:100%; }
   </div>
 </section>
 
-<section class="page" id="musica" data-page-section="musica">
-  <div class="music-v5 page-inner">
-    <header class="music-v5-hero">
-      <div class="eyebrow">Campo / música</div>
-      <h1>Música</h1>
-      <div class="music-v5-intro"><p>A música é uma das matérias centrais da 1917. Produção musical, criação, gravação e obras sonoras se articulam à pesquisa, à imagem, ao território e à realização cultural.</p><button class="inline-link nav-page-button" data-page="velvet">Conhecer The Velvet Margin <span>↗</span></button></div>
-    </header>
-
-    <section class="music-v5-statement"><span>Som</span><span>como</span><span>obra.</span></section>
 
     <section class="music-v5-practice">
       <div class="music-v5-section-head"><span class="eyebrow">01 / Produção</span><h2>Da ideia à escuta.</h2></div>
@@ -530,10 +584,6 @@ h1,h2,h3,p { max-width:100%; }
   </div>
 </section>
 
-<section class="page" id="audiovisual" data-page-section="audiovisual">
-  <div class="ca-v6 page-inner">
-    <header class="ca-v6-hero"><div><span class="eyebrow">1917 / Campo de atuação</span><h1>Audiovisual</h1></div><div><p class="ca-v6-lead">Imagem, som, narrativa e registro. A 1917 desenvolve obras audiovisuais em que pesquisa e produção participam da linguagem desde o início.</p><button class="inline-link nav-page-button" data-page="memorias">Ver obra em desenvolvimento <span>↗</span></button></div></header>
-    <section class="ca-v6-manifest"><span class="eyebrow">01 / Linguagem</span><div><h2>Imagem não ilustra.<br>Imagem constrói.</h2><div class="ca-v6-manifest-copy"><p>Roteiro, fotografia, som, montagem, arquivo e território são pensados como partes de uma mesma estrutura narrativa, de acordo com as necessidades de cada obra.</p><p>A produção organiza pesquisa, equipe, captação, logística e finalização sem separar execução e linguagem: decisões técnicas também são decisões narrativas.</p></div></div></section>
     <div class="av-v6-frame"><img src="/assets/arquivo-folia.png" alt="Arquivo visual relacionado à pesquisa de Memórias Sonoras"></div>
     <section style="margin-top:clamp(90px,12vw,160px)"><div class="ca-v6-fields"><article class="ca-v6-field"><span>01</span><h3>Documentário</h3><p>Pesquisa, personagens, arquivo, observação e território organizados por uma pergunta e por uma estrutura dramática.</p></article><article class="ca-v6-field"><span>02</span><h3>Webséries</h3><p>Obras seriadas concebidas com unidade visual e narrativa, ritmo próprio e estratégia de circulação compatível com o projeto.</p></article><article class="ca-v6-field"><span>03</span><h3>Performance</h3><p>Imagem e som em diálogo com música, corpo, cena, espaço e presença, do registro à criação audiovisual.</p></article><article class="ca-v6-field"><span>04</span><h3>Registro</h3><p>Captação de processos, entrevistas, apresentações e acontecimentos culturais com atenção à memória e à documentação.</p></article><article class="ca-v6-field"><span>05</span><h3>Montagem</h3><p>A edição organiza tempo, ponto de vista, arquivo, fala, silêncio e música para produzir sentido — não apenas continuidade.</p></article><article class="ca-v6-field"><span>06</span><h3>Som</h3><p>Captação, desenho sonoro, música e mixagem tratados como elementos narrativos e não como uma camada posterior à imagem.</p></article></div></section>
     <section class="ca-v6-feature"><div class="ca-v6-feature-head"><span class="eyebrow">02 / Obra em desenvolvimento</span><h2>Uma cidade<br>escutada.</h2></div><div class="ca-v6-image-grid"><button class="ca-v6-image nav-page-button" data-page="memorias"><img src="/assets/arquivo-carnaval.png" alt="Memórias Sonoras"></button><button class="ca-v6-image nav-page-button" data-page="memorias"><img src="/assets/arquivo-rock.png" alt="Pesquisa audiovisual de Memórias Sonoras"></button></div><div class="ca-v6-feature-copy"><p><strong>Memórias Sonoras</strong> é a principal obra documental em desenvolvimento da 1917: uma websérie que investiga São Paulo através das relações entre música, memória, território e transformação urbana.</p><p>O projeto articula pesquisa histórica e territorial, entrevistas, arquivo e gravações profissionais. A música participa da narrativa como experiência social e documento da cidade.</p></div><button class="inline-link nav-page-button" data-page="memorias">Conhecer Memórias Sonoras <span>↗</span></button></section>
@@ -544,7 +594,7 @@ h1,h2,h3,p { max-width:100%; }
 
 <section class="page" id="processo" data-page-section="processo"><div class="process-page page-inner"><div class="process-head"><div class="process-title-wrap"><h1 class="process-title">Desenvolvimento</h1></div><div class="process-intro"><div class="eyebrow">Como uma ideia se transforma em obra</div><p>Antes da primeira nota tocar ou da câmera ser ligada, existe o momento de chegar, escutar e olhar. É desse contato com a realidade — e com aquilo que ainda não foi revelado — que cada projeto começa.</p></div></div><div class="process-list"><article class="process-item"><div class="process-number">01</div><div class="process-content"><h2 class="process-word">Observar</h2><p class="process-description">A realidade é o ponto de partida. Caminhamos pelo lugar, escutamos seus sons, percebemos seus ritmos e prestamos atenção ao que normalmente passa despercebido.</p><span class="process-mark">+</span></div></article><article class="process-item"><div class="process-number">02</div><div class="process-content"><h2 class="process-word">Pesquisar</h2><p class="process-description">Arquivos, jornais, fotografias, discos, documentos, mapas, depoimentos, gravações antigas e relatos pessoais ajudam a reconstruir o contexto de cada história.</p><span class="process-mark">+</span></div></article><article class="process-item"><div class="process-number">03</div><div class="process-content"><h2 class="process-word">Criar</h2><p class="process-description">Transformamos pesquisa em conceito, narrativa e linguagem. A forma nasce do encontro entre o material encontrado e aquilo que o projeto precisa dizer.</p><span class="process-mark">+</span></div></article><article class="process-item"><div class="process-number">04</div><div class="process-content"><h2 class="process-word">Produzir</h2><p class="process-description">Equipe, recursos, tecnologia, produção, circulação e realização colocam a ideia em movimento — da preparação à obra final.</p><span class="process-mark">+</span></div></article></div></div></section>
 
-<section class="page" id="sobre" data-page-section="sobre"><div class="about-page page-inner"><div class="about-hero"><h1 class="about-title">Sobre</h1><div class="about-intro"><p>A 1917 Produções é uma produtora brasileira dedicada ao desenvolvimento e realização de projetos culturais e audiovisuais.</p></div></div><div class="about-strip"><div class="about-strip-label">Princípio</div><p class="about-strip-copy">Trabalhamos a partir da realidade, da pesquisa e da experiência humana para transformar matéria cultural em obra.</p></div><div class="about-body"><h2 class="about-body-title">Como<br>trabalhamos.</h2><div class="about-body-copy"><p>A 1917 atua entre produção cultural, audiovisual, música e desenvolvimento de projetos. A empresa articula pesquisa, criação e produção para transformar ideias em obras, registros e experiências culturais.</p><p>O trabalho atravessa música, memória, território, cidade, pesquisa e imagem. Cada projeto recebe uma estrutura própria, reunindo equipe, fornecedores, parceiros e profissionais de acordo com sua necessidade.</p><p>A 1917 também estrutura produções em parceria com empresas, instituições, artistas e outros profissionais, da preparação à realização e à entrega.</p><p>A direção da empresa é de <strong>Tiago Lins</strong>, cientista social, produtor musical, engenheiro de áudio e produtor cultural.</p></div></div></div></section>
+<section class="page" id="sobre" data-page-section="sobre"><div class="about-page page-inner"><div class="about-hero"><h1 class="about-title">Sobre</h1><div class="about-intro"><p>A 1917 Produções é uma produtora brasileira dedicada ao desenvolvimento e realização de obras culturais, musicais e audiovisuais.</p></div></div><div class="about-strip"><div class="about-strip-label">Princípio</div><p class="about-strip-copy">Trabalhamos a partir da realidade, da pesquisa e da experiência humana para transformar matéria cultural em obra.</p></div><div class="about-body"><h2 class="about-body-title">Como<br>trabalhamos.</h2><div class="about-body-copy"><p>A 1917 atua entre produção cultural, audiovisual, música e desenvolvimento de projetos. A empresa articula pesquisa, criação e produção para transformar ideias em obras, registros e experiências culturais.</p><p>O trabalho atravessa música, memória, território, cidade, pesquisa e imagem. Cada projeto recebe uma estrutura própria, reunindo equipe, fornecedores, parceiros e profissionais de acordo com sua necessidade.</p><p>A 1917 também estrutura produções em parceria com empresas, instituições, artistas e outros profissionais, da preparação à realização e à entrega.</p><p>A direção da empresa é de <strong>Tiago Lins</strong>, cientista social, produtor musical, engenheiro de áudio e produtor cultural.</p></div></div></div></section>
 
 <section class="page" id="parceiros" data-page-section="parceiros"><div class="partners-page page-inner"><div class="partners-head"><h1 class="partners-title">Parceiros</h1><p class="partners-lead">Uma produção se constrói em rede. A 1917 articula instituições, espaços, empresas, profissionais e artistas de acordo com a necessidade de cada projeto.</p></div><div class="partners-grid"><article class="partner-field"><span class="tiny">01</span><h2>Instituições</h2><p>Universidades, centros de pesquisa, equipamentos culturais e instituições que colaboram com projetos e pesquisas.</p></article><article class="partner-field"><span class="tiny">02</span><h2>Espaços</h2><p>Estúdios, salas, equipamentos culturais, locações e espaços de realização.</p></article><article class="partner-field"><span class="tiny">03</span><h2>Empresas</h2><p>Patrocinadores e empresas que apoiam projetos ou desenvolvem parcerias de produção.</p></article><article class="partner-field"><span class="tiny">04</span><h2>Coprodução</h2><p>Produtoras, profissionais e organizações que participam da realização de obras.</p></article><article class="partner-field"><span class="tiny">05</span><h2>Artistas</h2><p>Músicos, intérpretes, criadores e colaboradores que dão forma às obras.</p></article><article class="partner-field"><span class="tiny">06</span><h2>Pesquisa</h2><p>Pesquisadores, entrevistados, acervos e pessoas que compartilham conhecimento e memória.</p></article></div><div class="partners-note">Rede de produção / colaboração / realização</div></div></section>
 
@@ -595,9 +645,6 @@ h1,h2,h3,p { max-width:100%; }
     velvet:'/projetos/the-velvet-margin/',
     memorias:'/projetos/memorias-sonoras/',
     sociedade:'/projetos/sociedade-em-debate/',
-    cultura:'/cultura/',
-    audiovisual:'/audiovisual/',
-    musica:'/musica/',
     processo:'/desenvolvimento/',
     sobre:'/sobre/',
     parceiros:'/parceiros/',
@@ -609,9 +656,6 @@ h1,h2,h3,p { max-width:100%; }
     velvet:'The Velvet Margin — 1917 Produções',
     memorias:'Memórias Sonoras — 1917 Produções',
     sociedade:'Sociedade em Debate — 1917 Produções',
-    cultura:'Cultura — 1917 Produções',
-    audiovisual:'Audiovisual — 1917 Produções',
-    musica:'Música — 1917 Produções',
     processo:'Desenvolvimento — 1917 Produções',
     sobre:'Sobre — 1917 Produções',
     parceiros:'Parceiros — 1917 Produções',
