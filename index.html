@@ -531,6 +531,22 @@ h1,h2,h3,p { max-width:100%; }
     contato:'Contato — 1917 Produções'
   };
   const siteBase=window.location.hostname.endsWith('github.io')?'/1917-producoes':'';
+
+  /* GitHub Pages SPA fallback: 404.html redirects deep links to /?route=...
+     Restore the requested path before resolving the active page. */
+  (function restoreSpaRoute(){
+    const params=new URLSearchParams(window.location.search);
+    const requested=params.get('route');
+    if(!requested)return;
+    params.delete('route');
+    let cleanPath=requested.startsWith('/')?requested:'/'+requested;
+    if(siteBase && !cleanPath.startsWith(siteBase+'/') && cleanPath!==siteBase){
+      cleanPath=siteBase+cleanPath;
+    }
+    const query=params.toString();
+    history.replaceState(null,'',cleanPath+(query?'?'+query:'')+window.location.hash);
+  })();
+
   function routeFor(name){return siteBase+(routes[name]||'/');}
   function pageFromLocation(){
     const hash=window.location.hash.replace(/^#/,'').trim();
