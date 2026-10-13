@@ -402,20 +402,12 @@ img{
 
 .home-logo{
   position:relative;
-  width:min(76vw,1040px);
+  width:min(58vw,760px);
   max-width:100%;
   aspect-ratio:4 / 3;
   flex-shrink:0;
   isolation:isolate;
 }
-
-
-/*
-Cada camada utiliza a mesma imagem.
-
-O clip-path determina qual parte aparece
-em cada momento da animação.
-*/
 
 .home-logo-layer{
   position:absolute;
@@ -435,17 +427,11 @@ em cada momento da animação.
   object-position:left center;
 }
 
-
-/* PRIMEIRA ÁREA */
-
 .home-logo-layer-01{
   clip-path:inset(0 68% 0 0);
   transform:translateY(34px);
   filter:blur(4px);
 }
-
-
-/* REGIÃO CENTRAL */
 
 .home-logo-layer-02{
   clip-path:inset(0 35% 0 22%);
@@ -453,20 +439,11 @@ em cada momento da animação.
   filter:blur(4px);
 }
 
-
-/* REGIÃO DIREITA */
-
 .home-logo-layer-03{
   clip-path:inset(0 0 0 58%);
   transform:translateY(22px);
   filter:blur(3px);
 }
-
-
-/*
-A animação somente começa depois que
-o site.js adiciona .is-ready ao body.
-*/
 
 .home-page.is-ready .home-logo-layer-01{
   animation:
@@ -534,14 +511,11 @@ o site.js adiciona .is-ready ao body.
   position:absolute;
   inset:0;
   z-index:5;
-
   background-image:url("/assets/logo-1917-white.png");
   background-repeat:no-repeat;
   background-size:contain;
   background-position:left center;
-
   opacity:0;
-
   pointer-events:none;
   will-change:transform,opacity,clip-path;
 }
@@ -575,7 +549,6 @@ o site.js adiciona .is-ready ao body.
   line-height:1.02;
   letter-spacing:-.045em;
   max-width:760px;
-
   opacity:0;
   transform:translateY(16px);
 }
@@ -595,7 +568,6 @@ o site.js adiciona .is-ready ao body.
   font-size:9px;
   letter-spacing:.1em;
   text-transform:uppercase;
-
   opacity:0;
 }
 
@@ -613,7 +585,6 @@ o site.js adiciona .is-ready ao body.
   flex-wrap:wrap;
   gap:12px;
   margin-top:34px;
-
   opacity:0;
   transform:translateY(12px);
 }
@@ -630,18 +601,14 @@ o site.js adiciona .is-ready ao body.
 .home-bottom{
   margin-top:auto;
   padding-top:42px;
-
   display:flex;
   justify-content:space-between;
   gap:24px;
-
   border-top:1px solid rgba(255,255,255,.2);
-
   font-family:var(--mono);
   font-size:8px;
   letter-spacing:.07em;
   text-transform:uppercase;
-
   opacity:0;
 }
 
@@ -1569,17 +1536,13 @@ o site.js adiciona .is-ready ao body.
     font-size:clamp(70px,21vw,145px);
   }
 
-
-  /* HOME */
-
   .home-inner{
     padding-top:96px;
   }
 
   .home-logo{
-    width:min(90vw,780px);
+    width:min(68vw,620px);
   }
-
 
   .project-row{
     grid-template-columns:1fr;
@@ -1727,17 +1690,14 @@ o site.js adiciona .is-ready ao body.
     font-size:16px;
   }
 
-
-  /* HOME MOBILE */
-
   .home-inner{
     padding-top:82px;
     padding-bottom:28px;
   }
 
   .home-logo{
-    width:100%;
-    max-width:100%;
+    width:82vw;
+    max-width:420px;
     aspect-ratio:4 / 3;
   }
 
@@ -1758,7 +1718,6 @@ o site.js adiciona .is-ready ao body.
     flex-direction:column;
     gap:8px;
   }
-
 
   .project-cover{
     aspect-ratio:4/3;
